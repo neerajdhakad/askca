@@ -6,6 +6,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { useToast } from "./ui/use-toast";
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
   Form,
   FormControl,
   FormDescription,
@@ -74,8 +83,8 @@ export default function ProfileForm() {
       console.log(result);
       toast({
         title: "Submitted!",
-        description: "Your form has been submitted successfully.", 
-      }); 
+        description: "Your form has been submitted successfully.",
+      });
       form.reset();
       alert("Submitted!");
     } catch (error) {
@@ -84,9 +93,9 @@ export default function ProfileForm() {
     console.log(data);
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-lg w-full sm:w-96">
-        <h1 className="text-center text-2xl mb-6">Contact Me Form</h1>
+    <div className=" flex items-center justify-center text-white">
+      <div className=" p-8 rounded shadow-lg w-full sm:w-96">
+        <h1 className="text-center text-2xl mb-6 font-semibold">Register Now</h1>
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -129,11 +138,22 @@ export default function ProfileForm() {
                 </FormItem>
               )}
             />
-            <div className="text-center">
-              <Button className="" type="submit">
+            {/* <div className="text-center">
+            <DialogFooter>
+              <Button
+                className=""
+                type="submit"
+                // onClick={() => {
+                  //   toast({
+                    //     variant: "destructive",
+                    //     description: "Thanks for Registering!",
+                    //   })
+                    // }}
+                    >
                 Submit
               </Button>
-            </div>
+                </DialogFooter>
+            </div> */}
           </form>
         </Form>
       </div>
