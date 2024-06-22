@@ -10,7 +10,7 @@ function OurFeatures() {
       <p className="text-center text-md font-light">
         Features designed for your needs
       </p>
-      <div className="flex-col md:flex-row flex px-14 py-10 gap-4 md:gap-7 flex-wrap items-center justify-center">
+      <div className="flex-col md:flex-row flex px-14 py-10 gap-10 md:gap-7 flex-wrap items-center justify-center">
         <FeatureCard title="First of our kind" description={"We are first of the kind to let you make money through paper trading"}/>
         <FeatureCard title="0 Charge" description={"We do not charge even a penny from you"}/>
         <FeatureCard title="Robust" description={"A Robust platform with inbuilt risk management"}/>
