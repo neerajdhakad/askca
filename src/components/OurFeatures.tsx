@@ -3,7 +3,7 @@ import FeatureCard from "./FeatureCard";
 
 function OurFeatures() {
   return (
-    <div className="bg-[#182729] text-white">
+    <div className="bg-[#182729] text-white py-4 md:py-10">
       <h1 className="text-center text-white text-5xl font-semibold pt-12 pb-2">
         Our <span className="text-[#F49426]">Features</span>
       </h1>
