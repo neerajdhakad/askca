@@ -95,7 +95,7 @@ function Navbar() {
             </a>
           </li>
         ))}
-        <span className="ml-0 md:ml-8" onClick={showNavBar}>
+        <span className="ml-0 md:ml-8" onClick={()=>setOpen(false)}>
         <Register />
         </span>
       </div>
