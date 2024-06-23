@@ -4,6 +4,8 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { FaBeer } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -63,7 +65,7 @@ export default function Register() {
     },
   });
 
-  const onSubmit = async (data:any) => {
+  const onSubmit = async (data: any) => {
     const formData = new FormData();
     formData.append("Name", data.Name);
     formData.append("Email", data.Email);
@@ -80,10 +82,11 @@ export default function Register() {
         }
       );
       toast({
-        title: "Submitted!",
-        description: "Your form has been submitted successfully.",
-        style: { 
-          backgroundColor:'#fff'
+        description: "Successfully Registered!",
+        style: {
+          backgroundColor: "#AEF359",
+          color: "#101010",
+          font:'semibold'
         },
       });
       form.reset();
@@ -92,13 +95,18 @@ export default function Register() {
       console.error(error);
       toast({
         title: "Error",
-        description: "There was an error submitting the form.",
+        variant: "destructive",
+        description: "Error Occured !",
+        style: {
+          backgroundColor: "#fff",
+          color: "#101010",
+        },
       });
     }
   };
 
-  return ( 
-    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} >
+  return (
+    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogTrigger asChild>
         <Button
           className="w-fit md:w-auto bg-[#F49426] text-black register hover:bg-white register"
@@ -109,61 +117,64 @@ export default function Register() {
       </DialogTrigger>
       <DialogContent>
         <div className="mx-8 md:mx-0">
-        <DialogHeader>
-          <h1 className="text-center text-white text-2xl mb-6 font-semibold">
-            Register Now
-          </h1>
-        </DialogHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 text-white">
-            <FormField
-              control={form.control}
-              name="Name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Enter your Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="John Dyer" {...field} />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="Email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Enter your Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="john.dyer@gmail.com" {...field} />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="Phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Enter Phone Number</FormLabel>
-                  <FormControl>
-                    <Input placeholder="9999888867" {...field} />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
-              )}
-            />
-            <DialogFooter className="hover:text-white">
-              <Button type="submit" variant={'outline'} className="">
-                Register
-              </Button>
-            </DialogFooter>
-          </form>
-        </Form>
-      </div>
+          <DialogHeader>
+            <h1 className="text-center text-white text-2xl mb-6 font-semibold">
+              Register Now
+            </h1>
+          </DialogHeader>
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-6 text-white"
+            >
+              <FormField
+                control={form.control}
+                name="Name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Enter your Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John Dyer" {...field} />
+                    </FormControl>
+                    <FormMessage className="text-red-500" />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="Email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Enter your Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="john.dyer@gmail.com" {...field} />
+                    </FormControl>
+                    <FormMessage className="text-red-500" />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="Phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Enter Phone Number</FormLabel>
+                    <FormControl>
+                      <Input placeholder="9999888867" {...field} />
+                    </FormControl>
+                    <FormMessage className="text-red-500" />
+                  </FormItem>
+                )}
+              />
+              <DialogFooter className="hover:text-white">
+                <Button type="submit" variant={"outline"} className="">
+                  Register
+                </Button>
+              </DialogFooter>
+            </form>
+          </Form>
+        </div>
       </DialogContent>
-    </Dialog> 
+    </Dialog>
   );
 }
