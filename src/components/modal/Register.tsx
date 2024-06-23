@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useToast } from "../ui/use-toast";
+import { register } from "module";
 
 const formSchema = z.object({
   Name: z.string().min(5, {
@@ -96,8 +97,8 @@ export default function Register() {
     }
   };
 
-  return (
-    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+  return ( 
+    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} >
       <DialogTrigger asChild>
         <Button
           className="w-fit md:w-auto bg-[#F49426] text-black register hover:bg-white register"
@@ -107,6 +108,7 @@ export default function Register() {
         </Button>
       </DialogTrigger>
       <DialogContent>
+        <div className="mx-8 md:mx-0">
         <DialogHeader>
           <h1 className="text-center text-white text-2xl mb-6 font-semibold">
             Register Now
@@ -154,13 +156,14 @@ export default function Register() {
               )}
             />
             <DialogFooter className="hover:text-white">
-              <Button type="submit" className="bg-white text-black">
-                Save changes
+              <Button type="submit" variant={'outline'} className="">
+                Register
               </Button>
             </DialogFooter>
           </form>
         </Form>
+      </div>
       </DialogContent>
-    </Dialog>
+    </Dialog> 
   );
 }

@@ -17,11 +17,11 @@ function Navbar() {
 
   return (
     <div
-      className={`bg-[#101010] text-white fixed z-[999] w-full px-10 md:px-20 py-6 md:py-4 font-['Neue Montreal] flex flex-row items-center justify-between ${
+      className={` bg-[#101010] text-white fixed z-[999] w-full px-10 md:px-20 py-6 md:py-4 font-['Neue Montreal] flex flex-row items-center justify-between ${
         open ? "bg-zinc-900" : null
       }`}
     >
-      <div className="logo mb-4 md:mb-0">
+      <div className=" logo mb-4 md:mb-0">
         <svg
           width="137"
           height="42"
@@ -70,7 +70,7 @@ function Navbar() {
         </svg>
       </div>
 
-      <div className={`ham md:hidden ${open}`} onClick={showNavBar}>
+      <div className={` ham md:hidden ${open}`} onClick={showNavBar}>
         <RxHamburgerMenu />
       </div>
 
@@ -95,7 +95,7 @@ function Navbar() {
             </a>
           </li>
         ))}
-        <span className="ml-0 md:ml-8">
+        <span className="ml-0 md:ml-8" onClick={showNavBar}>
         <Register />
         </span>
       </div>
