@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image"; 
 import required from '/public/img/required.svg'
+import Register from "./modal/Register";
 
 function Required() {
   return ( 
@@ -15,9 +16,10 @@ function Required() {
         <h6 className="text-md md:text-2xl my-5">
         Nothing much, show your interest by registering yourself by clicking on the Register now button and our team will get in touch with you.
         </h6>
-        <Button className="bg-[#F49426] text-black hover:bg-white font-semibold register">
+        {/* <Button className="bg-[#F49426] text-black hover:bg-white font-semibold register">
              Register Now
-           </Button>
+           </Button> */}
+           <Register/>
       </div>
       
       <Image className="hidden md:flex md:w-2/5" src={required} alt={"about"} />

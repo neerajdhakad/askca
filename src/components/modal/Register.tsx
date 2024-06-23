@@ -1,29 +1,28 @@
 "use client";
 
+import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
-import { useToast } from "./ui/use-toast";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/components/ui/dialog";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useToast } from "../ui/use-toast";
 
 const formSchema = z.object({
   Name: z.string().min(5, {
@@ -50,9 +49,11 @@ const formSchema = z.object({
     }),
 });
 
-export default function ProfileForm() {
+export default function Register() {
   const { toast } = useToast();
-  const form = useForm<z.infer<typeof formSchema>>({
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       Name: "",
@@ -60,45 +61,59 @@ export default function ProfileForm() {
       Phone: "",
     },
   });
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+
+  const onSubmit = async (data:any) => {
     const formData = new FormData();
     formData.append("Name", data.Name);
     formData.append("Email", data.Email);
     formData.append("Phone", data.Phone);
 
     try {
-      const response = await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbwpjRYtpTUBshiVI5RkcfFkXWrJQJ0dXBxpF64n1POwOK3w1Wi-NHjXaeztrmj8G0Sw/exec",
         {
           method: "POST",
           body: formData,
           mode: "no-cors",
           cache: "no-cache",
-          headers: {
-            "Content-Type": "application/json",
-          },
         }
       );
-      const result = await response.json();
-      console.log(result);
       toast({
         title: "Submitted!",
         description: "Your form has been submitted successfully.",
+        style: { 
+          backgroundColor:'#fff'
+        },
       });
       form.reset();
-      alert("Submitted!");
+      setIsDialogOpen(false); // Close the dialog after submission
     } catch (error) {
       console.error(error);
+      toast({
+        title: "Error",
+        description: "There was an error submitting the form.",
+      });
     }
-    console.log(data);
   };
-  return (
-    <div className=" flex items-center justify-center text-white">
-      <div className=" p-8 rounded shadow-lg w-full sm:w-96">
-        <h1 className="text-center text-2xl mb-6 font-semibold">Register Now</h1>
 
+  return (
+    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+      <DialogTrigger asChild>
+        <Button
+          className="w-fit md:w-auto bg-[#F49426] text-black register hover:bg-white register"
+          onClick={() => setIsDialogOpen(true)}
+        >
+          Register Now
+        </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <h1 className="text-center text-white text-2xl mb-6 font-semibold">
+            Register Now
+          </h1>
+        </DialogHeader>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 text-white">
             <FormField
               control={form.control}
               name="Name"
@@ -138,17 +153,14 @@ export default function ProfileForm() {
                 </FormItem>
               )}
             />
-            <div className="text-center"> 
-              <Button
-                className=""
-                type="submit" 
-              >
-                Submit
-              </Button> 
-            </div>
+            <DialogFooter className="hover:text-white">
+              <Button type="submit" className="bg-white text-black">
+                Save changes
+              </Button>
+            </DialogFooter>
           </form>
         </Form>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 }
