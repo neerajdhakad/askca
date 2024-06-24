@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <div
-      className={` bg-[#101010] text-white fixed z-[999] w-full px-10 md:px-20 py-6 md:py-4 font-['Neue Montreal] flex flex-row items-center justify-between ${
+      className={` bg-[#101010] text-white fixed z-[999] w-full px-10 md:px-20 py-3 md:py-4 font-['Neue Montreal] flex flex-row items-center justify-between ${
         open ? "bg-zinc-900" : null
       }`}
     >
