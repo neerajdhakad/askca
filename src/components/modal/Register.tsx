@@ -109,7 +109,7 @@ export default function Register() {
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogTrigger asChild>
         <Button
-          className="w-fit md:w-auto bg-[#F49426] text-black register hover:bg-white register"
+          className="w-32 md:w-auto bg-[#F49426] text-black register hover:bg-white register"
           onClick={() => setIsDialogOpen(true)}
         >
           Register Now

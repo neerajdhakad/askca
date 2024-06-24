@@ -7,7 +7,7 @@ import Required from "@/components/Required";
 
 export default function Home() {
   return (
-    <div className="text-2xl center"> 
+    <div className="text-2xl center bg-[#101010] text-white"> 
       <HeroSection/>
       <Effortless/>
       <OurFeatures/>
