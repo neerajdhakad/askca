@@ -86,6 +86,7 @@ function Navbar() {
           >
             <a
               href={link.link}
+              onClick={()=>setOpen(false)}
               key={index}
               className={`text-lg capitalize font-light  ${
                 index === 4 && "md:ml-32"
