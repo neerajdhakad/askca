@@ -82,7 +82,7 @@ function Navbar() {
         {Links.map((link, index) => (
           <li
             key={link.name}
-            className="md:ml-8 text-xl md:my-0 my-7 list-none"
+            className="md:ml-8 text-xl md:my-0 my-7 list-none hover:text-[#F49426]"
           >
             <a
               href={link.link}
