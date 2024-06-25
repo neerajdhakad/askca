@@ -16,9 +16,9 @@ function Footer() {
       </div>
       <div className="flex-col gap-3 md:gap-0 md:flex-row flex justify-between">
         <div className="flex gap-5">
-        <a href="/">About</a>
-        <a href="/">Features</a>
-        <a href="/">Contact</a>
+        <a href="#about-us">About</a>
+        <a href="#features">Features</a>
+        <a href="mailto:aggarwalshivamkumar@gmail.com">Contact</a>
         </div>
         <div className="hidden">	&copy; {new Date().getFullYear()} All rights reserved</div>
       </div>

@@ -8,7 +8,7 @@ import e from "/public/img/Features/5.svg"
 
 function OurFeatures() {
   return (
-    <div className="bg-[#182729] text-white py-4 md:py-14">
+    <div id="features" className="bg-[#182729] text-white py-4 md:py-14">
       <h1 className="text-center text-white text-5xl font-semibold pt-12 pb-2">
         Our <span className="text-[#F49426]">Features</span>
       </h1>

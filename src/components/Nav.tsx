@@ -7,9 +7,9 @@ function Navbar() {
   let [open, setOpen] = useState(false);
 
   let Links = [
-    { name: "About Us", link: "/" },
-    { name: "Contact us", link: "/" },
-    { name: "What’s needed", link: "/" },
+    { name: "About Us", link: "#about-us" },
+    { name: "Contact us", link: "mailto:aggarwalshivamkumar@gmail.com" },
+    { name: "What’s needed", link: "#required" },
   ];
   const showNavBar = () => {
     setOpen(!open);
