@@ -14,7 +14,7 @@ function Required() {
           <span className="text-[#F49426]">your end</span>
         </h2>
         <h6 className="text-base font-light text-center md:text-left text-md md:text-2xl my-5">
-        Nothing much, show your interest by registering yourself by clicking on the Register now button and our team will get in touch with you.
+        Nothing much, show your interest by registering yourself by clicking on the <span className="text-[#F49426] font-semibold">&quot;Register Now&quot;</span> button and our team will get in touch with you.
         </h6>
         {/* <Button className="bg-[#F49426] text-black hover:bg-white font-semibold register">
              Register Now

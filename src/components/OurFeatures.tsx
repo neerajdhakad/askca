@@ -17,7 +17,7 @@ function OurFeatures() {
       </p>
       <div className="flex-col md:flex-row flex px-14 py-10 gap-10 md:gap-7 flex-wrap items-center justify-center">
         <FeatureCard title="First of our kind" description={"We are first of the kind to let you make money through paper trading"} source={e}/>
-        <FeatureCard title="0 Charge" description={"We do not charge even a penny from you"} source={a}/>
+        <FeatureCard title="Zero Charge" description={"We do not charge even a penny from you"} source={a}/>
         <FeatureCard title="Robust" description={"A Robust platform with inbuilt risk management"} source={b}/>
         <FeatureCard title="Flexibility" description={"Trade from anywhere at your convenience"} source={c}/>
         <FeatureCard title="Insights and tools" description={"Access to exclusive insights and tools tailored for the modern trader’s journey"} source={d}/>

@@ -20,7 +20,7 @@ function Footer() {
         <a href="/">Features</a>
         <a href="/">Contact</a>
         </div>
-        <div>	&copy; {new Date().getFullYear()} All rights reserved</div>
+        <div className="hidden">	&copy; {new Date().getFullYear()} All rights reserved</div>
       </div>
     </div>
   );
