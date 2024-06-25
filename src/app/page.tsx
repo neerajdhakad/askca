@@ -1,5 +1,4 @@
 import AboutUs from "@/components/AboutUs";
-import ContactForm from "@/components/ContactForm";
 import Effortless from "@/components/Effortless";
 import HeroSection from "@/components/HeroSection";
 import OurFeatures from "@/components/OurFeatures";
@@ -13,7 +12,6 @@ export default function Home() {
       <OurFeatures/>
       <AboutUs/>
       <Required/>
-      {/* <ContactForm/> */}
     </div>
   );
 }
