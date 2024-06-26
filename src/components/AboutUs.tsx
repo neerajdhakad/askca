@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import about from "/public/img/about-us.svg";
+import shivam from "/public/img/shivam.svg";
 import aboutUsBackground from "/public/img/about-us-bg.png";
 
 function AboutUs() {
@@ -15,12 +15,17 @@ function AboutUs() {
           quality={100}
           priority
           style={{opacity:'18%'}}
-        />
+        /> 
       </div>
-      <div className="relative z-10 flex flex-col md:flex-row justify-center items-center my-14 md:my-20">
-        <Image className="pl-0 md:pl-10 md:w-1/2" src={about} alt="about" />
-        <div className="mx-12 my-10 md:my-0 md:mx-28">
-          <h2 className="text-5xl text-center md:text-left md:text-6xl font-semibold md:w-1/2">
+      <div className="relative z-10 flex flex-col md:flex-row justify-center items-center my-8 md:my-20 md:mx-10">
+        <div className="pl-0 md:pl-10 flex flex-col items-center md:w-1/3">
+          <Image className="" src={shivam} alt="about" />
+          <p className="text-xl md:text-2xl mt-3 font-semibold">Shivam kumar Aggrawal</p>
+          <p className="text-xl md:text-2xl font-semibold">Founder -<span className="text-[#F49426]">Askca</span> </p>
+          <p className="text-xl md:text-2xl font-semibold">CA,M.com (Finance & Taxation)</p>
+        </div>
+        <div className="mx-12 mt-10 md:my-0 md:w-2/3">
+          <h2 className="text-5xl text-center md:text-left md:text-6xl font-semibold">
           About{" "}
             <span className="text-[#F49426]">US</span>
           </h2>

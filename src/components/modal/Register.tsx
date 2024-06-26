@@ -26,6 +26,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useToast } from "../ui/use-toast";
 import { register } from "module";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   Name: z.string().min(5, {
@@ -55,6 +56,7 @@ const formSchema = z.object({
 export default function Register() {
   const { toast } = useToast();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -66,6 +68,7 @@ export default function Register() {
   });
 
   const onSubmit = async (data: any) => {
+    setIsSubmitting(true);
     const formData = new FormData();
     formData.append("Name", data.Name);
     formData.append("Email", data.Email);
@@ -102,6 +105,8 @@ export default function Register() {
           color: "#101010",
         },
       });
+    }finally{
+      setIsSubmitting(false);
     }
   };
 
@@ -167,8 +172,14 @@ export default function Register() {
                 )}
               />
               <DialogFooter className="hover:text-white">
-                <Button type="submit" variant={"outline"} className="">
-                  Register
+                <Button type="submit" variant={"outline"} disabled={isSubmitting} className="">
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please wait
+                  </>
+                ) : (
+                  `Register`
+                )}
                 </Button>
               </DialogFooter>
             </form>

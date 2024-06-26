@@ -8,7 +8,7 @@ function Required() {
   return ( 
     <div id="required" className="bg-[#182729] h-fit text-white"> 
     <div className="flex flex-col md:flex-row justify-center items-center">
-      <div className="mx-12 my-10 md:my-0 md:mx-28 ">
+      <div className="mx-12 my-10 md:my-0 md:mx-10 ">
         <h2 className="text-4xl text-center md:text-left md:text-6xl font-semibold  md:w-3/5">
         What’s required at{" "}
           <span className="text-[#F49426]">your end</span>

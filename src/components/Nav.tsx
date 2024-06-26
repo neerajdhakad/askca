@@ -17,11 +17,11 @@ function Navbar() {
 
   return (
     <div
-      className={` bg-[#101010] text-white fixed z-[999] w-full px-10 md:px-20 py-3 md:py-4 font-['Neue Montreal] flex flex-row items-center justify-between ${
+      className={` bg-[#101010] text-white fixed z-[999] w-full px-10 md:px-20 py-3 md:py-4 flex flex-row items-center justify-between ${
         open ? "bg-zinc-900" : null
       }`}
     >
-      <div className=" logo mb-4 md:mb-0">
+      <div className="cursor-pointer logo md:mb-0 my-3">
         <svg
           width="137"
           height="42"
@@ -70,13 +70,16 @@ function Navbar() {
         </svg>
       </div>
 
-      <div className={` ham md:hidden ${open}`} onClick={showNavBar}>
-        <RxHamburgerMenu />
+      <div className={`my-3 ham md:hidden ${open}`} onClick={showNavBar}>
+        <RxHamburgerMenu 
+          className="cursor-pointer"
+          size={24} 
+        />
       </div>
 
       <div
-        className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-zinc-900 md:bg-transparent md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-          open ? "top-20 " : "top-[-490px]"
+        className={`md:flex items-center md:pb-0 pb-12 absolute md:static bg-zinc-900 md:bg-transparent md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          open ? "top-20" : "top-[-490px]"
         }`}
       >
         {Links.map((link, index) => (
