@@ -20,7 +20,7 @@ function Effortless() {
       <div className="relative z-10 flex flex-col md:flex-row justify-center items-center my-14 md:my-20 md:mx-10">
         <Image className="pl-0 md:pl-10 md:w-1/2" src={about} alt="about" />
         <div className="mx-12 mt-10 md:my-0 md:mx-28">
-          <h2 className="text-4xl text-center md:text-left md:text-6xl font-semibold md:w-1/2">
+          <h2 className="text-4xl text-center md:text-justify md:text-6xl font-semibold md:w-1/2">
             Is making money so{" "}
             <span className="text-[#F49426]">Effortless?</span>
           </h2>

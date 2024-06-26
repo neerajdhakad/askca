@@ -20,8 +20,8 @@ function AboutUs() {
       <div className="relative z-10 flex flex-col md:flex-row justify-center items-center my-8 md:my-20 md:mx-10">
         <div className="pl-0 md:pl-10 flex flex-col items-center md:w-1/3">
           <Image className="" src={shivam} alt="about" />
-          <p className="text-xl md:text-2xl mt-3 font-semibold">Shivam kumar Aggrawal</p>
-          <p className="text-xl md:text-2xl font-semibold">Founder -<span className="text-[#F49426]">Askca</span> </p>
+          <p className="text-xl md:text-2xl mt-3 font-semibold">Shivam kumar Aggarwal</p>
+          <p className="text-xl md:text-2xl font-semibold">Founder -<span className="text-[#F49426]">ASKCA</span> </p>
           <p className="text-xl md:text-2xl font-semibold">CA,M.com (Finance & Taxation)</p>
         </div>
         <div className="mx-12 mt-10 md:my-0 md:w-2/3">
@@ -29,7 +29,7 @@ function AboutUs() {
           About{" "}
             <span className="text-[#F49426]">US</span>
           </h2>
-          <h6 className="text-base font-light text-center md:text-left text-md md:text-2xl my-5">
+          <h6 className="text-base font-light text-center md:text-justify text-md md:text-2xl my-5">
              Founded with the motive to revolutionize the world of trading and
              empowering people to grab the opportunities with minimal risks. We
              strive to cultivate a community of informed traders who thrive on
