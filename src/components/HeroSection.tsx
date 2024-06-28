@@ -8,10 +8,10 @@ import Register from "./modal/Register";
 
 function HeroSection() {
   return (
-    <div className="hero relative pt-24 pb-8 md:pt-0 md:py-0 px-10 md:px-20 bg-[#101010] md:bg-transparent">
+    <div className="hero relative pt-20 pb-4 md:pt-0 md:py-0 px-10 md:px-20 bg-[#101010] md:bg-transparent">
       <div className="hero-content relative z-10 h-full  w-full md:w-1/2 text-white flex flex-col items-center md:items-start justify-center md:pt-60 md:pb-60">
         <Image src={phone} alt={""} className="text-center md:hidden"></Image>
-        <h2 className="text-center md:text-left my-4 md:my-0 text-5xl md:text-7xl font-semibold">
+        <h2 className="text-center md:text-left my-4 md:my-0 text-4xl md:text-7xl font-semibold">
           Kickstart Your Trading<span className="text-[#F49426]">Journey</span>
         </h2>
         <h6 className="text-center font-light md:text-justify text-sm md:text-xl my-2 md:my-5">
