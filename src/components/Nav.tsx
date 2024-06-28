@@ -22,7 +22,7 @@ function Navbar() {
       }`}
     >
       <div className="cursor-pointer logo md:mb-0 my-3">
-        <svg
+        <a href="/"><svg
           width="137"
           height="42"
           viewBox="0 0 137 42"
@@ -67,7 +67,7 @@ function Navbar() {
             stroke="white"
             stroke-width="0.883072"
           />
-        </svg>
+        </svg></a>
       </div>
 
       <div className={`my-3 ham md:hidden ${open}`} onClick={showNavBar}>
