@@ -14,7 +14,7 @@ function HeroSection() {
         <h2 className="text-center md:text-left my-4 md:my-0 text-5xl md:text-7xl font-semibold">
           Kickstart Your Trading<span className="text-[#F49426]">Journey</span>
         </h2>
-        <h6 className="text-center font-light md:text-justify text-sm md:text-xl my-5">
+        <h6 className="text-center font-light md:text-justify text-sm md:text-xl my-2 md:my-5">
           If you aspire to make trading, a full-time profession, without risking
           capital, join us. We are here to upgrade your trading to a next level
           without risking your hard-earned capital. 
