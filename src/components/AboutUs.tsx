@@ -36,7 +36,7 @@ function AboutUs() {
              strive to cultivate a community of informed traders who thrive on
              our platform, where security, transparency, profitability and risk
              management converge seamlessly.</p> 
-             <p className="py-2 md:py-4">We aspire to create a world where no
+             <p className="pb-2 md:pb-4">We aspire to create a world where no
              one should be restricted from choosing trading as a full time
              profession merely due to lack of support.</p>
           </h6>
